@@ -20,7 +20,8 @@ def read_file(file_name):
     """
     # Tips: kanksje "open"-funksjonen kunne være nyttig her: https://docs.python.org/3/library/functions.html#open
     with open(file_name, 'r', encoding='utf-8') as file:
-        return file.readlines()
+        return [line.strip() for line in file]
+
 
 
 def lines_to_words(lines):
